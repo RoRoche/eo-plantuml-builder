@@ -1,13 +1,3 @@
-buildscript {
-    repositories {
-        mavenCentral()
-        jcenter()
-    }
-    dependencies {
-        classpath 'io.github.classgraph:classgraph:4.8.78'
-    }
-}
-
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.3.72'
     id "jacoco"
