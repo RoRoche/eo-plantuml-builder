@@ -44,6 +44,9 @@ class PrintDiagramTest : TestsSuite(
         )
     )
 ) {
+    /**
+     * Companion object to statically declare a [TempDir].
+     */
     companion object TmpDir {
         @TempDir
         lateinit var tmpDirPath: Path
