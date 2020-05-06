@@ -38,7 +38,8 @@ https://sonarcloud.io/dashboard?id=RoRoche_eo-plantuml-builder[image:https://son
 
 === Dependencies
 
-image::https://snyk.io/test/github/RoRoche/eo-plantuml-builder/badge.svg[Known Vulnerabilities]
+https://snyk.io/test/github/RoRoche/eo-plantuml-builder[image:https://snyk.io/test/github/RoRoche/eo-plantuml-builder/badge.svg[Known
+Vulnerabilities]]
 
 === License
 
