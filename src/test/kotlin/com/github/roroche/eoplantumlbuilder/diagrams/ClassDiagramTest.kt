@@ -1,9 +1,9 @@
-package com.github.roroche.plantuml.diagrams
+package com.github.roroche.eoplantumlbuilder.diagrams
 
-import com.github.roroche.plantuml.assertions.DiagramHasContentAssertion
-import com.github.roroche.plantuml.classes.ClsFiltered
-import com.github.roroche.plantuml.classes.ClsInPackage
-import com.github.roroche.plantuml.classes.ClsWithNames
+import com.github.roroche.eoplantumlbuilder.assertions.DiagramHasContentAssertion
+import com.github.roroche.eoplantumlbuilder.classes.ClsFiltered
+import com.github.roroche.eoplantumlbuilder.classes.ClsInPackage
+import com.github.roroche.eoplantumlbuilder.classes.ClsWithNames
 import com.pragmaticobjects.oo.tests.TestCase
 import com.pragmaticobjects.oo.tests.junit5.TestsSuite
 
@@ -16,7 +16,7 @@ class ClassDiagramTest : TestsSuite(
         DiagramHasContentAssertion(
             diagram = ClassDiagram(
                 classes = ClsInPackage(
-                    packageName = "com.github.roroche.examples"
+                    packageName = "com.github.roroche.eoplantumlbuilder.examples"
                 )
             ),
             expectedContent = """
@@ -48,11 +48,11 @@ class ClassDiagramTest : TestsSuite(
             diagram = ClassDiagram(
                 classes = ClsFiltered(
                     origin = ClsInPackage(
-                        packageName = "com.github.roroche.examples"
+                        packageName = "com.github.roroche.eoplantumlbuilder.examples"
                     ),
                     ignored = ClsWithNames(
                         names = listOf(
-                            "com.github.roroche.examples.Vehicle"
+                            "com.github.roroche.eoplantumlbuilder.examples.Vehicle"
                         )
                     )
                 )

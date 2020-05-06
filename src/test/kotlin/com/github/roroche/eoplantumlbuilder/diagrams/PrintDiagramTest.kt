@@ -1,7 +1,7 @@
-package com.github.roroche.plantuml.diagrams
+package com.github.roroche.eoplantumlbuilder.diagrams
 
-import com.github.roroche.plantuml.assertions.KtFileHasContentAssertion
-import com.github.roroche.plantuml.classes.ClsInPackage
+import com.github.roroche.eoplantumlbuilder.assertions.FileHasContentAssertion
+import com.github.roroche.eoplantumlbuilder.classes.ClsInPackage
 import com.pragmaticobjects.oo.tests.TestCase
 import com.pragmaticobjects.oo.tests.junit5.TestsSuite
 import org.junit.jupiter.api.io.TempDir
@@ -13,10 +13,10 @@ import java.nio.file.Path
 class PrintDiagramTest : TestsSuite(
     TestCase(
         "assert Diagram content is printed to file",
-        KtFileHasContentAssertion(
+        FileHasContentAssertion(
             diagram = ClassDiagram(
                 classes = ClsInPackage(
-                    packageName = "com.github.roroche.examples"
+                    packageName = "com.github.roroche.eoplantumlbuilder.examples"
                 )
             ),
             file = tmpDirPath.resolve("output.txt").toFile(),

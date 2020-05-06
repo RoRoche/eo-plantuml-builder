@@ -1,4 +1,4 @@
-package com.github.roroche.plantuml.classes
+package com.github.roroche.eoplantumlbuilder.classes
 
 /**
  * Classes to be used for diagram generation.

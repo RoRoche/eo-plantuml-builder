@@ -1,6 +1,6 @@
 package com.github.roroche.eoplantumlbuilder.assertions
 
-import com.github.roroche.plantuml.diagrams.Diagram
+import com.github.roroche.eoplantumlbuilder.diagrams.Diagram
 import com.github.roroche.eoplantumlbuilder.diagrams.PrintedDiagram
 import com.pragmaticobjects.oo.tests.Assertion
 import org.assertj.core.api.Assertions.assertThat
@@ -12,7 +12,7 @@ import java.io.File
  * @property file The [File] to check.
  * @property expectedContent The expected content.
  */
-class KtFileHasContentAssertion(
+class FileHasContentAssertion(
     private val file: File,
     private val expectedContent: String
 ) : Assertion {

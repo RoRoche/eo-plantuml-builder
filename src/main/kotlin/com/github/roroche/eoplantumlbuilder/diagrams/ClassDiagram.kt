@@ -1,7 +1,7 @@
-package com.github.roroche.plantuml.diagrams
+package com.github.roroche.eoplantumlbuilder.diagrams
 
 import ch.ifocusit.plantuml.classdiagram.ClassDiagramBuilder
-import com.github.roroche.plantuml.classes.Classes
+import com.github.roroche.eoplantumlbuilder.classes.Classes
 
 /**
  * Class representing a PlantUML class diagram.

@@ -1,10 +1,10 @@
-package com.github.roroche.plantuml.classes
+package com.github.roroche.eoplantumlbuilder.classes
 
-import com.github.roroche.examples.Car
-import com.github.roroche.examples.Driver
-import com.github.roroche.examples.Vehicle
-import com.github.roroche.plantuml.assertions.ClsContainsExactlyAssertion
-import com.github.roroche.plantuml.assertions.ClsIsEmptyAssertion
+import com.github.roroche.eoplantumlbuilder.assertions.ClsContainsExactlyAssertion
+import com.github.roroche.eoplantumlbuilder.assertions.ClsIsEmptyAssertion
+import com.github.roroche.eoplantumlbuilder.examples.Car
+import com.github.roroche.eoplantumlbuilder.examples.Driver
+import com.github.roroche.eoplantumlbuilder.examples.Vehicle
 import com.pragmaticobjects.oo.tests.TestCase
 import com.pragmaticobjects.oo.tests.junit5.TestsSuite
 
@@ -17,9 +17,9 @@ class ClsWithNamesTest : TestsSuite(
         ClsContainsExactlyAssertion(
             classes = ClsWithNames(
                 names = listOf(
-                    "com.github.roroche.examples.Car",
-                    "com.github.roroche.examples.Driver",
-                    "com.github.roroche.examples.Vehicle"
+                    "com.github.roroche.eoplantumlbuilder.examples.Car",
+                    "com.github.roroche.eoplantumlbuilder.examples.Driver",
+                    "com.github.roroche.eoplantumlbuilder.examples.Vehicle"
                 )
             ),
             expectedClasses = listOf(

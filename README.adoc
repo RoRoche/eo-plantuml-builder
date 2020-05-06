@@ -15,6 +15,15 @@ By Rultor.com]]
 
 https://hitsofcode.com/view/github/RoRoche/eo-plantuml-builder[image:https://hitsofcode.com/github/RoRoche/eo-plantuml-builder[Hits-of-Code]]
 
+== Class diagram
+
+[source,plantuml]
+----
+include::diagrams/class_diagram.plantuml[]
+----
+
+image::diagrams/classes.svg[Class diagram]
+
 == Credits
 
 Built on top of awesome libraries:

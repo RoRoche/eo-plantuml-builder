@@ -1,6 +1,6 @@
-package com.github.roroche.plantuml.assertions
+package com.github.roroche.eoplantumlbuilder.assertions
 
-import com.github.roroche.plantuml.diagrams.Diagram
+import com.github.roroche.eoplantumlbuilder.diagrams.Diagram
 import com.pragmaticobjects.oo.tests.Assertion
 import org.assertj.core.api.Assertions.assertThat
 

@@ -1,4 +1,4 @@
-package com.github.roroche.plantuml.diagrams
+package com.github.roroche.eoplantumlbuilder.diagrams
 
 import java.io.File
 

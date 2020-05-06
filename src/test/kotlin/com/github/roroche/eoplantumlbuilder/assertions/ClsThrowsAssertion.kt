@@ -1,6 +1,6 @@
-package com.github.roroche.plantuml.assertions
+package com.github.roroche.eoplantumlbuilder.assertions
 
-import com.github.roroche.plantuml.classes.Classes
+import com.github.roroche.eoplantumlbuilder.classes.Classes
 import com.pragmaticobjects.oo.tests.Assertion
 import org.assertj.core.api.Assertions.assertThatThrownBy
 

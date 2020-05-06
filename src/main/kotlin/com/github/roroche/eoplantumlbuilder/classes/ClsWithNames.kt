@@ -1,4 +1,4 @@
-package com.github.roroche.plantuml.classes
+package com.github.roroche.eoplantumlbuilder.classes
 
 /**
  * Utility class to find [Classes] for names.

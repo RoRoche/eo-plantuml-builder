@@ -1,6 +1,6 @@
-package com.github.roroche.plantuml.classes
+package com.github.roroche.eoplantumlbuilder.classes
 
-import com.github.roroche.plantuml.classes.exceptions.InvalidPackageException
+import com.github.roroche.eoplantumlbuilder.classes.exceptions.InvalidPackageException
 import org.reflections.Reflections
 import org.reflections.scanners.SubTypesScanner
 import org.reflections.scanners.TypeAnnotationsScanner

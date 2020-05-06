@@ -1,11 +1,11 @@
-package com.github.roroche.plantuml.classes
+package com.github.roroche.eoplantumlbuilder.classes
 
-import com.github.roroche.examples.Car
-import com.github.roroche.examples.Driver
-import com.github.roroche.examples.Vehicle
-import com.github.roroche.plantuml.assertions.ClsContainsExactlyAssertion
-import com.github.roroche.plantuml.assertions.ClsThrowsAssertion
-import com.github.roroche.plantuml.classes.exceptions.InvalidPackageException
+import com.github.roroche.eoplantumlbuilder.assertions.ClsContainsExactlyAssertion
+import com.github.roroche.eoplantumlbuilder.assertions.ClsThrowsAssertion
+import com.github.roroche.eoplantumlbuilder.classes.exceptions.InvalidPackageException
+import com.github.roroche.eoplantumlbuilder.examples.Car
+import com.github.roroche.eoplantumlbuilder.examples.Driver
+import com.github.roroche.eoplantumlbuilder.examples.Vehicle
 import com.pragmaticobjects.oo.tests.TestCase
 import com.pragmaticobjects.oo.tests.junit5.TestsSuite
 
@@ -17,7 +17,7 @@ class ClsInPackageTest : TestsSuite(
         "classes in package contains concrete classes",
         ClsContainsExactlyAssertion(
             classes = ClsInPackage(
-                packageName = "com.github.roroche.examples"
+                packageName = "com.github.roroche.eoplantumlbuilder.examples"
             ),
             expectedClasses = listOf(
                 Car::class.java,
@@ -30,7 +30,7 @@ class ClsInPackageTest : TestsSuite(
         "empty package returns throws",
         ClsThrowsAssertion(
             classes = ClsInPackage(
-                packageName = "com.github.roroche.examples.empty"
+                packageName = "com.github.roroche.eoplantumlbuilder.examples.empty"
             ),
             expectedClass = InvalidPackageException::class.java,
             expectedMessage = "Invalid package 'com.github.roroche.examples.empty', maybe missing or empty"
@@ -40,7 +40,7 @@ class ClsInPackageTest : TestsSuite(
         "not existing package throws",
         ClsThrowsAssertion(
             classes = ClsInPackage(
-                packageName = "com.github.roroche.examples.missing"
+                packageName = "com.github.roroche.eoplantumlbuilder.examples.missing"
             ),
             expectedClass = InvalidPackageException::class.java,
             expectedMessage = "Invalid package 'com.github.roroche.examples.missing', maybe missing or empty"
