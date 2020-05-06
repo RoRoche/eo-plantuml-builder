@@ -30,6 +30,4 @@ deploy:
     tags: true
     condition: "$TRAVIS_SECURE_ENV_VARS"
   provider: script
-  script: >-
-    echo $GPG_KEY_CONTENTS | base64 -d > /secret.gpg
-    ./gradlew -PnewVersion="$TRAVIS_TAG" clean jar publish closeAndReleaseRepository
+  script: bash scripts/deploy.sh
