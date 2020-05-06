@@ -1,4 +1,4 @@
-package com.github.roroche.eoplantumlbuilder.assertions
+package com.github.roroche.eoplantumlbuilder.classes.assertions
 
 import com.github.roroche.eoplantumlbuilder.classes.Classes
 import com.pragmaticobjects.oo.tests.Assertion

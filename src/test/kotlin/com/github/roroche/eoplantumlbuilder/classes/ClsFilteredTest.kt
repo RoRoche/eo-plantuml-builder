@@ -1,7 +1,7 @@
 package com.github.roroche.eoplantumlbuilder.classes
 
-import com.github.roroche.eoplantumlbuilder.assertions.ClsContainsExactlyAssertion
-import com.github.roroche.eoplantumlbuilder.assertions.ClsIsEmptyAssertion
+import com.github.roroche.eoplantumlbuilder.classes.assertions.ClsContainsExactlyAssertion
+import com.github.roroche.eoplantumlbuilder.classes.assertions.ClsIsEmptyAssertion
 import com.github.roroche.eoplantumlbuilder.examples.Car
 import com.github.roroche.eoplantumlbuilder.examples.Driver
 import com.pragmaticobjects.oo.tests.TestCase

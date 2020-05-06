@@ -1,6 +1,6 @@
 package com.github.roroche.eoplantumlbuilder.diagrams
 
-import com.github.roroche.eoplantumlbuilder.assertions.FileHasContentAssertion
+import com.github.roroche.eoplantumlbuilder.diagrams.assertions.FileHasContentAssertion
 import com.github.roroche.eoplantumlbuilder.classes.ClsInPackage
 import com.pragmaticobjects.oo.tests.TestCase
 import com.pragmaticobjects.oo.tests.junit5.TestsSuite

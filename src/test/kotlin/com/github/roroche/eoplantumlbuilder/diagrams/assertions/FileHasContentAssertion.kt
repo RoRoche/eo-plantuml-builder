@@ -1,4 +1,4 @@
-package com.github.roroche.eoplantumlbuilder.assertions
+package com.github.roroche.eoplantumlbuilder.diagrams.assertions
 
 import com.github.roroche.eoplantumlbuilder.diagrams.Diagram
 import com.github.roroche.eoplantumlbuilder.diagrams.PrintedDiagram

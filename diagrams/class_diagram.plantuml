@@ -26,6 +26,8 @@ interface "Diagram" {
   print(File)
 }
 
+class "InvalidPackageException"
+
 "Classes" <-> "ClsFiltered" : /ignored
 "Classes" <|-- "ClsInPackage"
 "Classes" <|-- "ClsWithNames"

@@ -1,6 +1,6 @@
 package com.github.roroche.eoplantumlbuilder.diagrams
 
-import com.github.roroche.eoplantumlbuilder.assertions.DiagramHasContentAssertion
+import com.github.roroche.eoplantumlbuilder.diagrams.assertions.DiagramHasContentAssertion
 import com.github.roroche.eoplantumlbuilder.classes.ClsFiltered
 import com.github.roroche.eoplantumlbuilder.classes.ClsInPackage
 import com.github.roroche.eoplantumlbuilder.classes.ClsWithNames
