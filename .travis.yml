@@ -1,0 +1,26 @@
+---
+os: linux
+dist: trusty
+language: java
+jdk:
+  - openjdk11
+install: true
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/
+
+script:
+  - ./gradlew -PnewVersion="$TRAVIS_TAG" clean
+  - ./gradlew -PnewVersion="$TRAVIS_TAG" build
+  - ./gradlew -PnewVersion="$TRAVIS_TAG" check
+  - ./gradlew -PnewVersion="$TRAVIS_TAG" jacocoTestReport
+#  - ./gradlew sonarqube -Dsonar.login=$SONAR_TOKEN
+
+after_success:
+  - bash <(curl -Ls https://coverage.codacy.com/get.sh)
+  - bash <(curl -s https://codecov.io/bash)

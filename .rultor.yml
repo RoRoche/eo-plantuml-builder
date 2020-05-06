@@ -1,0 +1,3 @@
+release:
+  script: |-
+    git commit --allow-empty -am "${tag}"
