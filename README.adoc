@@ -10,6 +10,50 @@ image::assets/icon.png[Icon]
 
 image:https://travis-ci.com/RoRoche/eo-plantuml-builder.svg?branch=master["Build Status", link="https://travis-ci.com/RoRoche/eo-plantuml-builder"]
 
+=== Code coverage
+
+https://codecov.io/gh/RoRoche/eo-plantuml-builder[image:https://codecov.io/gh/RoRoche/eo-plantuml-builder/branch/master/graph/badge.svg[codecov]]
+
+=== Analysis
+
+image:https://api.codacy.com/project/badge/Grade/27af97ee5790463c82961db716b6f716["Codacy code quality",link="https://www.codacy.com/manual/romain-rochegude_2/eo-plantuml-builder?utm_source=github.com&utm_medium=referral&utm_content=RoRoche/eo-plantuml-builder&utm_campaign=Badge_Grade"]
+https://sonarcloud.io/dashboard?id=RoRoche_eo-plantuml-builder[image:https://sonarcloud.io/api/project_badges/measure?project=RoRoche_eo-plantuml-builder&metric=alert_status[Quality
+Gate Status]]
+https://sonarcloud.io/dashboard?id=RoRoche_eo-plantuml-builder[image:https://sonarcloud.io/api/project_badges/measure?project=RoRoche_eo-plantuml-builder&metric=bugs[Bugs]]
+https://sonarcloud.io/dashboard?id=RoRoche_eo-plantuml-builder[image:https://sonarcloud.io/api/project_badges/measure?project=RoRoche_eo-plantuml-builder&metric=code_smells[Code
+Smells]]
+https://sonarcloud.io/dashboard?id=RoRoche_eo-plantuml-builder[image:https://sonarcloud.io/api/project_badges/measure?project=RoRoche_eo-plantuml-builder&metric=duplicated_lines_density[Duplicated
+Lines (%)]]
+https://sonarcloud.io/dashboard?id=RoRoche_eo-plantuml-builder[image:https://sonarcloud.io/api/project_badges/measure?project=RoRoche_eo-plantuml-builder&metric=ncloc[Lines
+of Code]]
+https://sonarcloud.io/dashboard?id=RoRoche_eo-plantuml-builder[image:https://sonarcloud.io/api/project_badges/measure?project=RoRoche_eo-plantuml-builder&metric=sqale_rating[Maintainability
+Rating]]
+https://sonarcloud.io/dashboard?id=RoRoche_eo-plantuml-builder[image:https://sonarcloud.io/api/project_badges/measure?project=RoRoche_eo-plantuml-builder&metric=reliability_rating[Reliability
+Rating]]
+https://sonarcloud.io/dashboard?id=RoRoche_eo-plantuml-builder[image:https://sonarcloud.io/api/project_badges/measure?project=RoRoche_eo-plantuml-builder&metric=security_rating[Security
+Rating]]
+https://sonarcloud.io/dashboard?id=RoRoche_eo-plantuml-builder[image:https://sonarcloud.io/api/project_badges/measure?project=RoRoche_eo-plantuml-builder&metric=sqale_index[Technical
+Debt]]
+https://sonarcloud.io/dashboard?id=RoRoche_eo-plantuml-builder[image:https://sonarcloud.io/api/project_badges/measure?project=RoRoche_eo-plantuml-builder&metric=vulnerabilities[Vulnerabilities]]
+
+=== Dependencies
+
+image::https://snyk.io/test/github/RoRoche/eo-plantuml-builder/badge.svg[Known Vulnerabilities]
+
+=== License
+
+image:https://img.shields.io/github/license/RoRoche/eo-plantuml-builder[GitHub]
+
+=== Version
+
+image:https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fplugins.gradle.org%2Fm2%2Fcom%2Fgithub%2Froroche%2Feo-plantuml-builder%2Fmaven-metadata.xml[Maven metadata URL]
+
+=== Activity
+
+image:https://img.shields.io/github/contributors/RoRoche/eo-plantuml-builder[GitHub contributors]
+image:https://img.shields.io/github/last-commit/RoRoche/eo-plantuml-builder[GitHub last commit]
+image:https://img.shields.io/github/release-date/RoRoche/eo-plantuml-builder[GitHub Release Date]
+
 === Other
 
 image::https://www.elegantobjects.org/badge.svg[Elegant Objects]

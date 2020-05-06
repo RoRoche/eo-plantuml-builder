@@ -3,7 +3,7 @@ os: linux
 dist: trusty
 language: java
 jdk:
-  - openjdk11
+  - openjdk8
 install: true
 
 before_cache:
@@ -30,4 +30,4 @@ deploy:
     tags: true
     condition: "$TRAVIS_SECURE_ENV_VARS"
   provider: script
-  script: ./gradlew -PnewVersion="$TRAVIS_TAG" clean assemble publish closeAndReleaseRepository
+  script: ./gradlew -PnewVersion="$TRAVIS_TAG" clean jar publish closeAndReleaseRepository

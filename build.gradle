@@ -1,8 +1,21 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'io.github.classgraph:classgraph:4.8.78'
+    }
+}
+
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.3.72'
     id "jacoco"
-//    id "com.github.roroche.plantuml" version "1.0.13-SNAPSHOT"
+    id "com.github.roroche.plantuml" version "1.0.1"
     id "org.fmiw.plantuml" version "0.1"
+    id "org.jetbrains.dokka" version "0.10.1"
+    id "io.codearte.nexus-staging" version "0.21.2"
+    id "de.marcphilipp.nexus-publish" version "0.4.0"
 }
 
 group 'com.github.roroche'
@@ -14,6 +27,7 @@ if (project.hasProperty('newVersion')) {
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -51,16 +65,16 @@ jacocoTestReport {
     dependsOn(check)
 }
 
-//classDiagram {
-//    packageName = "com.github.roroche.eoplantumlbuilder"
-//    outputFile = project.file('diagrams/class_diagram.plantuml')
-//    ignoredClasses = [
-//            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Simple",
-//            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Wrap",
-//            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Simple",
-//            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Wrap"
-//    ]
-//}
+classDiagram {
+    packageName = "com.github.roroche.eoplantumlbuilder"
+    outputFile = project.file('diagrams/class_diagram.plantuml')
+    ignoredClasses = [
+            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Simple",
+            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Wrap",
+            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Simple",
+            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Wrap"
+    ]
+}
 
 plantuml {
     options {
@@ -74,4 +88,24 @@ plantuml {
     }
 }
 
-//generateDiagramClasses.dependsOn(buildClassDiagram)
+generateDiagramClasses.dependsOn(buildClassDiagram)
+
+dokka {
+    outputFormat = 'javadoc'
+    outputDirectory = "$buildDir/javadoc"
+    configuration {
+        reportUndocumented = true
+        platform = "JVM"
+        jdkVersion = 8
+    }
+}
+
+//region Publishing
+ext {
+    PUBLISH_GROUP_ID = "com.github.roroche"
+    PUBLISH_ARTIFACT_ID = "eo-plantuml-builder"
+    PUBLISH_DESCRIPTION = "Kotlin library to build PlantUML diagrams"
+}
+
+apply from: "${rootProject.projectDir}/publish/publish_kotlin_library.gradle"
+//endregion
