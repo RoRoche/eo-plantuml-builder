@@ -1,7 +1,7 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.3.72'
     id "jacoco"
-    id "com.github.roroche.plantuml" version "1.0.12-SNAPSHOT"
+//    id "com.github.roroche.plantuml" version "1.0.12-SNAPSHOT"
     id "org.fmiw.plantuml" version "0.1"
 }
 
@@ -52,16 +52,16 @@ jacocoTestReport {
     dependsOn(check)
 }
 
-classDiagram {
-    packageName = "com.github.roroche.eoplantumlbuilder"
-    outputFile = project.file('diagrams/class_diagram.plantuml')
-    ignoredClasses = [
-            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Simple",
-            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Wrap",
-            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Simple",
-            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Wrap"
-    ]
-}
+//classDiagram {
+//    packageName = "com.github.roroche.eoplantumlbuilder"
+//    outputFile = project.file('diagrams/class_diagram.plantuml')
+//    ignoredClasses = [
+//            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Simple",
+//            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Wrap",
+//            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Simple",
+//            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Wrap"
+//    ]
+//}
 
 plantuml {
     options {
