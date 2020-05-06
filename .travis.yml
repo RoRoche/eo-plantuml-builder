@@ -19,8 +19,15 @@ script:
   - ./gradlew -PnewVersion="$TRAVIS_TAG" build
   - ./gradlew -PnewVersion="$TRAVIS_TAG" check
   - ./gradlew -PnewVersion="$TRAVIS_TAG" jacocoTestReport
-#  - ./gradlew sonarqube -Dsonar.login=$SONAR_TOKEN
 
 after_success:
   - bash <(curl -Ls https://coverage.codacy.com/get.sh)
   - bash <(curl -s https://codecov.io/bash)
+
+deploy:
+  cleanup: true
+  on:
+    tags: true
+    condition: "$TRAVIS_SECURE_ENV_VARS"
+  provider: script
+  script: ./gradlew -PnewVersion="$TRAVIS_TAG" clean assemble publish closeAndReleaseRepository

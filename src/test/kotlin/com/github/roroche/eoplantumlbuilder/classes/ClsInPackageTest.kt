@@ -33,7 +33,7 @@ class ClsInPackageTest : TestsSuite(
                 packageName = "com.github.roroche.eoplantumlbuilder.examples.empty"
             ),
             expectedClass = InvalidPackageException::class.java,
-            expectedMessage = "Invalid package 'com.github.roroche.examples.empty', maybe missing or empty"
+            expectedMessage = "Invalid package 'com.github.roroche.eoplantumlbuilder.examples.empty', maybe missing or empty"
         )
     ),
     TestCase(
@@ -43,7 +43,7 @@ class ClsInPackageTest : TestsSuite(
                 packageName = "com.github.roroche.eoplantumlbuilder.examples.missing"
             ),
             expectedClass = InvalidPackageException::class.java,
-            expectedMessage = "Invalid package 'com.github.roroche.examples.missing', maybe missing or empty"
+            expectedMessage = "Invalid package 'com.github.roroche.eoplantumlbuilder.examples.missing', maybe missing or empty"
         )
     )
 )
