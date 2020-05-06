@@ -25,9 +25,7 @@ after_success:
   - bash <(curl -s https://codecov.io/bash)
 
 deploy:
-  cleanup: true
   on:
     tags: true
-    condition: "$TRAVIS_SECURE_ENV_VARS"
   provider: script
   script: bash scripts/deploy.sh
