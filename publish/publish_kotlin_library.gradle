@@ -81,7 +81,7 @@ publishing {
             pom {
                 name = PUBLISH_ARTIFACT_ID
                 description = PUBLISH_DESCRIPTION
-                url = 'https://github.com/RoRoche/elegant-android'
+                url = 'https://github.com/RoRoche/eo-plantuml-builder'
                 licenses {
                     license {
                         name = 'The Apache License, Version 2.0'
@@ -96,9 +96,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = 'scm:git:github.com/RoRoche/elegant-android.git'
-                    developerConnection = 'scm:git:ssh://github.com/RoRoche/elegant-android.git'
-                    url = 'https://github.com/RoRoche/elegant-android/tree/master'
+                    connection = 'scm:git:github.com/RoRoche/eo-plantuml-builder.git'
+                    developerConnection = 'scm:git:ssh://github.com/RoRoche/eo-plantuml-builder.git'
+                    url = 'https://github.com/RoRoche/eo-plantuml-builder/tree/master'
                 }
                 withXml {
                     def dependenciesNode = asNode().appendNode('dependencies')
