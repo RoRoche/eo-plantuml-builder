@@ -23,9 +23,3 @@ script:
 after_success:
   - bash <(curl -Ls https://coverage.codacy.com/get.sh)
   - bash <(curl -s https://codecov.io/bash)
-
-deploy:
-  on:
-    tags: true
-  provider: script
-  script: bash scripts/deploy.sh
