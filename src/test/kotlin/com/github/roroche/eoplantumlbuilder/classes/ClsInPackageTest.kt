@@ -1,7 +1,5 @@
 package com.github.roroche.eoplantumlbuilder.classes
 
-import ch.ifocusit.plantuml.utils.ClassUtils
-import ch.ifocusit.plantuml.utils.PlantUmlUtils
 import com.github.roroche.eoplantumlbuilder.assertions.ClsContainsExactlyAssertion
 import com.github.roroche.eoplantumlbuilder.assertions.ClsThrowsAssertion
 import com.github.roroche.eoplantumlbuilder.classes.exceptions.InvalidPackageException

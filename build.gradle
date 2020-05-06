@@ -55,12 +55,12 @@ jacocoTestReport {
 classDiagram {
     packageName = "com.github.roroche.eoplantumlbuilder"
     outputFile = project.file('diagrams/class_diagram.plantuml')
-//    ignoredClasses = [
-//            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Simple",
-//            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Wrap",
-//            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Simple",
-//            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Wrap"
-//    ]
+    ignoredClasses = [
+            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Simple",
+            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Wrap",
+            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Simple",
+            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Wrap"
+    ]
 }
 
 plantuml {

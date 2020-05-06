@@ -12,6 +12,7 @@ class ClsWithNames(
      * @return Classes to be used for diagram generation.
      */
     override fun list(): List<Class<out Any>> {
+
         return if(names?.isEmpty() != false) {
             emptyList()
         } else {
