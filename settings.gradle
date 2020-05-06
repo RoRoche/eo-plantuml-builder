@@ -1,6 +1,7 @@
 pluginManagement {
     repositories {
         gradlePluginPortal()
+        mavenLocal()
     }
 }
 rootProject.name = 'eo-plantuml-builder'

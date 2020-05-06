@@ -6,6 +6,10 @@ image::assets/icon.png[Icon]
 
 == Badges
 
+=== Build
+
+image:https://travis-ci.com/RoRoche/eo-plantuml-builder.svg?branch=master["Build Status", link="https://travis-ci.com/RoRoche/eo-plantuml-builder"]
+
 === Other
 
 image::https://www.elegantobjects.org/badge.svg[Elegant Objects]
