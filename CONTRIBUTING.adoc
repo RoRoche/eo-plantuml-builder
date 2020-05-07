@@ -1,0 +1,36 @@
+= Contributing
+
+== Branch naming convention
+
+In order to keep branches clear and expressive, please use the following prefixes:
+
+* `feature/` when implementing a new feature
+* `fix/` when fixing a bug/issue
+* `improvement/` when improving the code base (both production code and test code)
+
+== Test the project locally
+
+[source, shell]
+----
+$ git clone https://github.com/RoRoche/eo-plantuml-builder
+$ git fetch
+----
+
+Then in the `build.gradle` file, change the line 15 to set the version you want.
+
+Then publish it to local Maven using `./gradlew publishToMavenLocal`
+
+In the consuming `build.gradle` file:
+
+.build.gradle
+[source, groovy]
+----
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation "com.github.roroche:eo-plantuml-builder:{version}"
+}
+----
