@@ -1,0 +1,38 @@
+@startuml
+
+class "ClassDiagram"
+
+interface "Classes" {
+  list() : List<Class<?>>
+}
+
+class "ClsFiltered" {
+  ignored : Classes
+  list() : List<Class<?>>
+}
+
+class "ClsInPackage" {
+  packageName : String
+  classGraph : ClassGraph
+  list() : List<Class<?>>
+}
+
+class "ClsWithNames" {
+  names : List<String>
+  classLoader : ClassLoader
+  list() : List<Class<?>>
+}
+
+interface "Diagram" {
+  content() : String
+  print(File)
+}
+
+class "InvalidPackageException"
+
+"Classes" <-> "ClsFiltered" : /ignored
+"Classes" <|-- "ClsInPackage"
+"Classes" <|-- "ClsWithNames"
+"Diagram" <|-- "ClassDiagram"
+
+@enduml
