@@ -13,8 +13,8 @@ import java.io.File
  * @property expectedContent The expected content.
  */
 class FileHasContentAssertion(
-    private val file: File,
-    private val expectedContent: String
+        private val file: File,
+        private val expectedContent: String
 ) : Assertion {
 
     /**
@@ -25,15 +25,15 @@ class FileHasContentAssertion(
      * @param expectedContent The expected content.
      */
     constructor(
-        diagram: Diagram,
-        file: File,
-        expectedContent: String
+            diagram: Diagram,
+            file: File,
+            expectedContent: String
     ) : this(
-        PrintedDiagram(
-            diagram,
-            file
-        ).file(),
-        expectedContent
+            PrintedDiagram(
+                    diagram,
+                    file
+            ).file(),
+            expectedContent
     )
 
     /**
@@ -41,9 +41,9 @@ class FileHasContentAssertion(
      */
     override fun check() {
         assertThat(
-            file.readText()
+                file.readText()
         ).isEqualTo(
-            expectedContent
+                expectedContent
         )
     }
 }

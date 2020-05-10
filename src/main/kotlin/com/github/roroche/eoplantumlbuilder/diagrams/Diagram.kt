@@ -25,8 +25,8 @@ interface Diagram {
      * @property content The content of the digram.
      */
     class Simple(
-        private val content: String
-    ): Diagram {
+            private val content: String
+    ) : Diagram {
         /**
          * @return The content of the diagram.
          */
@@ -48,6 +48,6 @@ interface Diagram {
      * @property delegate The delegate [Diagram].
      */
     abstract class Wrap(
-        private val delegate: Diagram
+            private val delegate: Diagram
     ) : Diagram by delegate
 }

@@ -9,7 +9,7 @@ import com.github.roroche.eoplantumlbuilder.classes.Classes
  * @param delegate The delegate [Diagram].
  */
 class ClassDiagram(
-    delegate: Diagram
+        delegate: Diagram
 ) : Diagram.Wrap(delegate) {
 
     /**
@@ -19,14 +19,14 @@ class ClassDiagram(
      * @param builder The [ClassDiagramBuilder] to build the class diagram.
      */
     constructor(
-        classes: Classes,
-        builder: ClassDiagramBuilder
+            classes: Classes,
+            builder: ClassDiagramBuilder
     ) : this(
-        Diagram.Simple(
-            builder.addClasse(
-                classes.list()
-            ).build()
-        )
+            Diagram.Simple(
+                    builder.addClasse(
+                            classes.list()
+                    ).build()
+            )
     )
 
     /**
@@ -35,7 +35,7 @@ class ClassDiagram(
      * @param classes The [Classes] to be scanned.
      */
     constructor(classes: Classes) : this(
-        classes = classes,
-        builder = ClassDiagramBuilder()
+            classes = classes,
+            builder = ClassDiagramBuilder()
     )
 }

@@ -60,9 +60,11 @@ classDiagram {
     outputFile = project.file('diagrams/class_diagram.plantuml')
     ignoredClasses = [
             "com.github.roroche.eoplantumlbuilder.classes.Classes\$Simple",
-            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Wrap",
+            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Wrap",
             "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Simple",
-            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Wrap"
+            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Wrap",
+            "com.github.roroche.eoplantumlbuilder.urls.Urls\$Simple",
+            "com.github.roroche.eoplantumlbuilder.urls.Urls\$Wrap"
     ]
 }
 

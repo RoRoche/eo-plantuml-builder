@@ -6,5 +6,5 @@ package com.github.roroche.eoplantumlbuilder.classes.exceptions
  * @param packageName The name of the package.
  */
 class InvalidPackageException(
-    packageName: String
+        packageName: String
 ) : RuntimeException("Invalid package '$packageName', maybe missing or empty")

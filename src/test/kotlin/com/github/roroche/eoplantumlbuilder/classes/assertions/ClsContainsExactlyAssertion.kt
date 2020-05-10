@@ -11,17 +11,17 @@ import org.assertj.core.api.Assertions.assertThat
  * @property expectedClasses The expected [Class].
  */
 class ClsContainsExactlyAssertion(
-    private val classes: Classes,
-    private val expectedClasses: List<Class<out Any>>
+        private val classes: Classes,
+        private val expectedClasses: List<Class<out Any>>
 ) : Assertion {
     /**
      * Check the assertion.
      */
     override fun check() {
         assertThat(
-            classes.list()
+                classes.list()
         ).containsExactlyInAnyOrderElementsOf(
-            expectedClasses
+                expectedClasses
         )
     }
 }

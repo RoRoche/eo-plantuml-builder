@@ -1,6 +1,7 @@
 package com.github.roroche.eoplantumlbuilder.classes
 
 import com.github.roroche.eoplantumlbuilder.classes.exceptions.InvalidPackageException
+import com.github.roroche.eoplantumlbuilder.urls.Urls
 import io.github.classgraph.ClassGraph
 import java.net.URL
 import java.net.URLClassLoader
@@ -12,8 +13,8 @@ import java.net.URLClassLoader
  * @property classGraph Utility to find classes in package.
  */
 class ClsInPackage(
-    private val packageName: String,
-    private val classGraph: ClassGraph
+        private val packageName: String,
+        private val classGraph: ClassGraph
 ) : Classes {
 
     /**
@@ -23,17 +24,17 @@ class ClsInPackage(
      * @param classLoader The [ClassLoader] to use.
      */
     constructor(
-        packageName: String,
-        classLoader: ClassLoader
+            packageName: String,
+            classLoader: ClassLoader
     ) : this(
-        packageName = packageName,
-        classGraph = ClassGraph(
-        ).whitelistPackages(
-            packageName
-        ).enableClassInfo(
-        ).overrideClassLoaders(
-            classLoader
-        )
+            packageName = packageName,
+            classGraph = ClassGraph(
+            ).whitelistPackages(
+                    packageName
+            ).enableClassInfo(
+            ).overrideClassLoaders(
+                    classLoader
+            )
     )
 
     /**
@@ -43,11 +44,25 @@ class ClsInPackage(
      * @param urls The [URL] array to use.
      */
     constructor(
-        packageName: String,
-        urls: Array<URL>
+            packageName: String,
+            urls: Array<URL>
     ) : this(
-        packageName = packageName,
-        classLoader = URLClassLoader(urls)
+            packageName = packageName,
+            classLoader = URLClassLoader(urls)
+    )
+
+    /**
+     * Secondary constructor.
+     *
+     * @param packageName The name of the package to scan.
+     * @param urls The [Urls] to use.
+     */
+    constructor(
+            packageName: String,
+            urls: Urls
+    ) : this(
+            packageName = packageName,
+            urls = urls.list().toTypedArray()
     )
 
     /**
@@ -56,10 +71,10 @@ class ClsInPackage(
      * @param packageName The name of the package to scan.
      */
     constructor(
-        packageName: String
+            packageName: String
     ) : this(
-        packageName = packageName,
-        classLoader = Thread.currentThread().contextClassLoader
+            packageName = packageName,
+            classLoader = Thread.currentThread().contextClassLoader
     )
 
     /**

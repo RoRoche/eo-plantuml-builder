@@ -15,7 +15,7 @@ interface Classes {
      * @property origin The delegate.
      */
     abstract class Wrap(
-        protected val origin: Classes
+            protected val origin: Classes
     ) : Classes by origin
 
     /**
@@ -24,7 +24,7 @@ interface Classes {
      * @property classes The list of [Class].
      */
     class Simple(
-        private val classes: List<Class<out Any>>
+            private val classes: List<Class<out Any>>
     ) : Classes {
         /**
          * @return Classes to be used for diagram generation.

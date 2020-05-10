@@ -10,14 +10,14 @@ import org.assertj.core.api.Assertions.assertThat
  * @property classes The [Classes] to check.
  */
 class ClsIsEmptyAssertion(
-    private val classes: Classes
+        private val classes: Classes
 ) : Assertion {
     /**
      * Check the assertion.
      */
     override fun check() {
         assertThat(
-            classes.list()
+                classes.list()
         ).isEmpty()
     }
 }

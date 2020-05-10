@@ -28,11 +28,27 @@ interface "Diagram" {
   print(File)
 }
 
+class "FilesUrls" {
+  files : List<File>
+  list() : List<URL>
+}
+
 class "InvalidPackageException"
+
+class "MergedUrls" {
+  urls : List<Urls>
+  list() : List<URL>
+}
+
+interface "Urls" {
+  list() : List<URL>
+}
 
 "Classes" <-> "ClsFiltered" : /ignored
 "Classes" <|-- "ClsInPackage"
 "Classes" <|-- "ClsWithNames"
 "Diagram" <|-- "ClassDiagram"
+"Urls" <|-- "FilesUrls"
+"Urls" "*" <-> "MergedUrls" : /urls
 
 @enduml

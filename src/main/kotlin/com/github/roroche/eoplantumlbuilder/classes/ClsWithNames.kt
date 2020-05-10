@@ -7,8 +7,8 @@ package com.github.roroche.eoplantumlbuilder.classes
  * @property classLoader The [ClassLoader] to be used.
  */
 class ClsWithNames(
-    private val names: List<String>?,
-    private val classLoader: ClassLoader
+        private val names: List<String>?,
+        private val classLoader: ClassLoader
 ) : Classes {
 
     /**
@@ -17,10 +17,10 @@ class ClsWithNames(
      * @param names The names of the classes to find.
      */
     constructor(
-        names: List<String>?
+            names: List<String>?
     ) : this(
-        names = names,
-        classLoader = Thread.currentThread().contextClassLoader
+            names = names,
+            classLoader = Thread.currentThread().contextClassLoader
     )
 
     /**
@@ -32,9 +32,9 @@ class ClsWithNames(
         } else {
             names.map { name ->
                 Class.forName(
-                    name,
-                    true,
-                    classLoader
+                        name,
+                        true,
+                        classLoader
                 )
             }
         }

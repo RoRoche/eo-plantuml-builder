@@ -12,9 +12,9 @@ import org.assertj.core.api.Assertions.assertThatThrownBy
  * @property expectedMessage The expected [Exception] message.
  */
 class ClsThrowsAssertion(
-    private val classes: Classes,
-    private val expectedClass: Class<out Exception>,
-    private val expectedMessage: String
+        private val classes: Classes,
+        private val expectedClass: Class<out Exception>,
+        private val expectedMessage: String
 ) : Assertion {
     /**
      * Check the assertion.
@@ -23,9 +23,9 @@ class ClsThrowsAssertion(
         assertThatThrownBy {
             classes.list()
         }.isInstanceOf(
-            expectedClass
+                expectedClass
         ).hasMessageContaining(
-            expectedMessage
+                expectedMessage
         )
     }
 }

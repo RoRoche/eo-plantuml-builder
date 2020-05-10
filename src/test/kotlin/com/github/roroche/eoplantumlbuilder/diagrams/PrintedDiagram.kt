@@ -9,8 +9,8 @@ import java.io.File
  * @property file The [File] where to print.
  */
 class PrintedDiagram(
-    private val diagram: Diagram,
-    private val file: File
+        private val diagram: Diagram,
+        private val file: File
 ) {
     /**
      * @return The [File] after printing the [Diagram].

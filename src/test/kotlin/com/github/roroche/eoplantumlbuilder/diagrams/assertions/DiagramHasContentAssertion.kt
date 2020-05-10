@@ -11,15 +11,15 @@ import org.assertj.core.api.Assertions.assertThat
  * @property expectedContent The expected content.
  */
 class DiagramHasContentAssertion(
-    private val diagram: Diagram,
-    private val expectedContent: String
+        private val diagram: Diagram,
+        private val expectedContent: String
 ) : Assertion {
     /**
      * Check the assertion.
      */
     override fun check() {
         assertThat(
-            diagram.content()
+                diagram.content()
         ).isEqualTo(expectedContent)
     }
 }

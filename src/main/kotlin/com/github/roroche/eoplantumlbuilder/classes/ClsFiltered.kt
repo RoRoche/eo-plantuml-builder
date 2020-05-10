@@ -7,8 +7,8 @@ package com.github.roroche.eoplantumlbuilder.classes
  * @property ignored The [Classes] to be ignored.
  */
 class ClsFiltered(
-    origin: Classes,
-    private val ignored: Classes
+        origin: Classes,
+        private val ignored: Classes
 ) : Classes.Wrap(origin) {
     /**
      * @return Filtered classes to be used for diagram generation.
