@@ -61,12 +61,6 @@ if (secretPropsFile.exists()) {
     ext["ossStagingProfileId"] = System.getenv('STAGING_PROFILE_ID')
 }
 
-if (project.hasProperty('newVersion')) {
-    project.version = project.newVersion
-} else {
-    project.version = '0.0.1'
-}
-
 publishing {
     publications {
         release(MavenPublication) {

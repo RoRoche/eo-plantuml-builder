@@ -49,6 +49,10 @@ image:https://img.shields.io/github/license/RoRoche/eo-plantuml-builder[GitHub]
 
 image:https://img.shields.io/maven-metadata/v?metadataUrl=https%3A%2F%2Fplugins.gradle.org%2Fm2%2Fcom%2Fgithub%2Froroche%2Feo-plantuml-builder%2Fmaven-metadata.xml[Maven metadata URL]
 
+=== Documentation
+
+https://javadoc.io/doc/com.github.roroche/eo-plantuml-builder[image:https://javadoc.io/badge2/com.github.roroche/eo-plantuml-builder/javadoc.svg[javadoc]]
+
 === Activity
 
 image:https://img.shields.io/github/contributors/RoRoche/eo-plantuml-builder[GitHub contributors]
