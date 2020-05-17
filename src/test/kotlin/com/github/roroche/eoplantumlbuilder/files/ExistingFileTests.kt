@@ -18,7 +18,7 @@ import java.nio.file.Path
  */
 class ExistingFileTests : TestsSuite(
     TestCase(
-        "File does not exist and no fallback",
+        "File does not exist and no fallback throws",
         OutputFileThrowsExceptionAssertion(
             outputFile = ExistingFile(
                 file = tmpDirPath.resolve("does_not_exist_file.txt").toFile()

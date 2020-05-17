@@ -17,7 +17,7 @@ import java.nio.file.Path
  */
 class ExistingDirectoryTests : TestsSuite(
     TestCase(
-        "Directory does not exist and no fallback",
+        "Directory does not exist and no fallback throws",
         OutputFileThrowsExceptionAssertion(
             outputFile = ExistingDirectory(
                 file = tmpDirPath.resolve("does_not_exist").toFile()
