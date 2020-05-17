@@ -1,7 +1,8 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.3.72'
     id "jacoco"
-    id "com.github.roroche.plantuml" version "1.0.2"
+//    id "com.github.roroche.plantuml" version "1.0.2"
+//    id "com.github.roroche.plantuml" version "1.0.34-SNAPSHOT"
     id "org.fmiw.plantuml" version "0.1"
     id "org.jetbrains.dokka" version "0.10.1"
     id "io.codearte.nexus-staging" version "0.21.2"
@@ -55,18 +56,18 @@ jacocoTestReport {
     dependsOn(check)
 }
 
-classDiagram {
-    packageName = "com.github.roroche.eoplantumlbuilder"
-    outputFile = project.file('diagrams/class_diagram.plantuml')
-    ignoredClasses = [
-            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Simple",
-            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Wrap",
-            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Simple",
-            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Wrap",
-            "com.github.roroche.eoplantumlbuilder.urls.Urls\$Simple",
-            "com.github.roroche.eoplantumlbuilder.urls.Urls\$Wrap"
-    ]
-}
+//classDiagram {
+//    packageName = "com.github.roroche.eoplantumlbuilder"
+//    outputFile = project.file('diagrams/class_diagram.plantuml')
+//    ignoredClasses = [
+//            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Simple",
+//            "com.github.roroche.eoplantumlbuilder.classes.Classes\$Wrap",
+//            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Simple",
+//            "com.github.roroche.eoplantumlbuilder.diagrams.Diagram\$Wrap",
+//            "com.github.roroche.eoplantumlbuilder.urls.Urls\$Simple",
+//            "com.github.roroche.eoplantumlbuilder.urls.Urls\$Wrap"
+//    ]
+//}
 
 plantuml {
     options {
@@ -80,7 +81,7 @@ plantuml {
     }
 }
 
-generateDiagramClasses.dependsOn(buildClassDiagram)
+//generateDiagramClasses.dependsOn(buildClassDiagram)
 
 dokka {
     outputFormat = 'javadoc'

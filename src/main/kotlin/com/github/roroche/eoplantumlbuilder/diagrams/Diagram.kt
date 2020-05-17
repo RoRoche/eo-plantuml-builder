@@ -1,5 +1,6 @@
 package com.github.roroche.eoplantumlbuilder.diagrams
 
+import com.github.roroche.eoplantumlbuilder.files.OutputFile
 import java.io.File
 
 /**
@@ -15,17 +16,17 @@ interface Diagram {
     /**
      * Print the content into the [File].
      *
-     * @param file The [File] where to print content.
+     * @param output The [OutputFile] where to print content.
      */
-    fun print(file: File)
+    fun print(output: OutputFile)
 
     /**
      * Convenient class representing a simple diagram.
      *
-     * @property content The content of the digram.
+     * @property content The content of the diagram.
      */
     class Simple(
-            private val content: String
+        private val content: String
     ) : Diagram {
         /**
          * @return The content of the diagram.
@@ -35,10 +36,10 @@ interface Diagram {
         /**
          * Print the content into the [File].
          *
-         * @param file The [File] where to print content.
+         * @param output The [OutputFile] where to print content.
          */
-        override fun print(file: File) {
-            file.writeText(content())
+        override fun print(output: OutputFile) {
+            output.file().writeText(content())
         }
     }
 
@@ -48,6 +49,6 @@ interface Diagram {
      * @property delegate The delegate [Diagram].
      */
     abstract class Wrap(
-            private val delegate: Diagram
+        private val delegate: Diagram
     ) : Diagram by delegate
 }
