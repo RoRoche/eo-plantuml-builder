@@ -17,7 +17,10 @@ class FileExistsAssertion(
      */
     override fun check() {
         assertThat(
-            output.file()
-        ).exists().isFile
+                output.file()
+        ).exists()
+        assertThat(
+                output.file()
+        ).isFile()
     }
 }

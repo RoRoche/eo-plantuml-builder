@@ -10,14 +10,17 @@ import org.assertj.core.api.Assertions.assertThat
  * @property output The [OutputFile] to be checked.
  */
 class DirectoryExistsAssertion(
-    private val output: OutputFile
+        private val output: OutputFile
 ) : Assertion {
     /**
      * Check the assertion.
      */
     override fun check() {
         assertThat(
-            output.file()
-        ).exists().isDirectory
+                output.file()
+        ).exists()
+        assertThat(
+                output.file()
+        ).isDirectory()
     }
 }

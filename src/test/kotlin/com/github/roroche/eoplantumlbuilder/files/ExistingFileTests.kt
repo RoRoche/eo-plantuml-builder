@@ -21,7 +21,7 @@ class ExistingFileTests : TestsSuite(
         "File does not exist and no fallback",
         OutputFileThrowsExceptionAssertion(
             outputFile = ExistingFile(
-                file = tmpDirPath.resolve("doesnotexist.txt").toFile()
+                file = tmpDirPath.resolve("does_not_exist_file.txt").toFile()
             ),
             expectedClass = FileDoesNotExistException::class.java
         )
@@ -30,9 +30,9 @@ class ExistingFileTests : TestsSuite(
         "File does not exist and fallback creates it",
         FileExistsAssertion(
             output = ExistingFile(
-                file = tmpDirPath.resolve("doesnotexist.txt").toFile(),
+                file = tmpDirPath.resolve("does_not_exist_file_but_will_be_created.txt").toFile(),
                 fallback = CreateFileFallback(
-                    file = tmpDirPath.resolve("doesnotexist.txt").toFile()
+                    file = tmpDirPath.resolve("does_not_exist_file_but_will_be_created.txt").toFile()
                 )
             )
         )
@@ -42,12 +42,12 @@ class ExistingFileTests : TestsSuite(
         FixturedAssertion(
             fixtures = listOf(
                 CreateFileFixture(
-                    file = tmpDirPath.resolve("exists.txt").toFile()
+                    file = tmpDirPath.resolve("existing_file.txt").toFile()
                 )
             ),
             delegate = FileExistsAssertion(
                 output = ExistingFile(
-                    file = tmpDirPath.resolve("exists.txt").toFile()
+                    file = tmpDirPath.resolve("existing_file.txt").toFile()
                 )
             )
         )
@@ -57,12 +57,12 @@ class ExistingFileTests : TestsSuite(
         FixturedAssertion(
             fixtures = listOf(
                 CreateDirectoryFixture(
-                    directory = tmpDirPath.resolve("exists").toFile()
+                    directory = tmpDirPath.resolve("existing_directory").toFile()
                 )
             ),
             delegate = OutputFileThrowsExceptionAssertion(
                 outputFile = ExistingFile(
-                    file = tmpDirPath.resolve("exists").toFile()
+                    file = tmpDirPath.resolve("existing_directory").toFile()
                 ),
                 expectedClass = FileAlreadyExistsAsDirectoryException::class.java
             )
@@ -72,7 +72,7 @@ class ExistingFileTests : TestsSuite(
         "A file with no parent and no fallback for it throws",
         OutputFileThrowsExceptionAssertion(
             outputFile = ExistingFile(
-                file = tmpDirPath.resolve("parentdoesnotexist").resolve("doesnotexist.txt").toFile()
+                file = tmpDirPath.resolve("parent_does_not_exist").resolve("does_not_exist.txt").toFile()
             ),
             expectedClass = DirectoryDoesNotExistException::class.java
         )
@@ -81,15 +81,15 @@ class ExistingFileTests : TestsSuite(
         "A file exists after creating parent and itself",
         FileExistsAssertion(
             output = ExistingFile(
-                file = tmpDirPath.resolve("parentdoesnotexist").resolve("doesnotexist.txt").toFile(),
+                file = tmpDirPath.resolve("parent_does_not_exist_but_will_be_created").resolve("does_not_exist_but_will_be_created.txt").toFile(),
                 parent = ExistingDirectory(
-                    file = tmpDirPath.resolve("parentdoesnotexist").toFile(),
+                    file = tmpDirPath.resolve("parent_does_not_exist_but_will_be_created").toFile(),
                     fallback = MkdirsFallback(
-                        file = tmpDirPath.resolve("parentdoesnotexist").toFile()
+                        file = tmpDirPath.resolve("parent_does_not_exist_but_will_be_created").toFile()
                     )
                 ),
                 fallback = CreateFileFallback(
-                    file = tmpDirPath.resolve("parentdoesnotexist").resolve("doesnotexist.txt").toFile()
+                    file = tmpDirPath.resolve("parent_does_not_exist_but_will_be_created").resolve("does_not_exist_but_will_be_created.txt").toFile()
                 )
             )
         )

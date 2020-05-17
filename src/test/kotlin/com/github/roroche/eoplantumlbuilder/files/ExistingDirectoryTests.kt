@@ -1,7 +1,6 @@
 package com.github.roroche.eoplantumlbuilder.files
 
 import com.github.roroche.eoplantumlbuilder.files.assertions.DirectoryExistsAssertion
-import com.github.roroche.eoplantumlbuilder.files.assertions.FileExistsAssertion
 import com.github.roroche.eoplantumlbuilder.files.assertions.OutputFileThrowsExceptionAssertion
 import com.github.roroche.eoplantumlbuilder.files.exceptions.DirectoryAlreadyExistsAsFileException
 import com.github.roroche.eoplantumlbuilder.files.exceptions.DirectoryDoesNotExistException
@@ -21,18 +20,18 @@ class ExistingDirectoryTests : TestsSuite(
         "Directory does not exist and no fallback",
         OutputFileThrowsExceptionAssertion(
             outputFile = ExistingDirectory(
-                file = tmpDirPath.resolve("doesnotexist").toFile()
+                file = tmpDirPath.resolve("does_not_exist").toFile()
             ),
             expectedClass = DirectoryDoesNotExistException::class.java
         )
     ),
     TestCase(
         "Directory does not exist and fallback creates it",
-        FileExistsAssertion(
+        DirectoryExistsAssertion(
             output = ExistingDirectory(
-                file = tmpDirPath.resolve("doesnotexist").toFile(),
+                file = tmpDirPath.resolve("does_not_exist_but_will_be_created").toFile(),
                 fallback = MkdirsFallback(
-                    file = tmpDirPath.resolve("doesnotexist").toFile()
+                    file = tmpDirPath.resolve("does_not_exist_but_will_be_created").toFile()
                 )
             )
         )
@@ -42,12 +41,12 @@ class ExistingDirectoryTests : TestsSuite(
         FixturedAssertion(
             fixtures = listOf(
                 CreateDirectoryFixture(
-                    directory = tmpDirPath.resolve("exists").toFile()
+                    directory = tmpDirPath.resolve("existing_directory").toFile()
                 )
             ),
             delegate = DirectoryExistsAssertion(
-                output = ExistingFile(
-                    file = tmpDirPath.resolve("exists").toFile()
+                output = ExistingDirectory(
+                    file = tmpDirPath.resolve("existing_directory").toFile()
                 )
             )
         )
@@ -57,12 +56,12 @@ class ExistingDirectoryTests : TestsSuite(
         FixturedAssertion(
             fixtures = listOf(
                 CreateFileFixture(
-                    file = tmpDirPath.resolve("exists").toFile()
+                    file = tmpDirPath.resolve("existing_file").toFile()
                 )
             ),
             delegate = OutputFileThrowsExceptionAssertion(
                 outputFile = ExistingDirectory(
-                    file = tmpDirPath.resolve("exists").toFile()
+                    file = tmpDirPath.resolve("existing_file").toFile()
                 ),
                 expectedClass = DirectoryAlreadyExistsAsFileException::class.java
             )

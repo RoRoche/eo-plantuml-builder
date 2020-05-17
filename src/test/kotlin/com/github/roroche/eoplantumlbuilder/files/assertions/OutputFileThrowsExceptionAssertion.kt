@@ -9,27 +9,19 @@ import org.assertj.core.api.Assertions.assertThatThrownBy
  *
  * @property outputFile The [OutputFile] to check.
  * @property expectedClass The [Exception] [Class] expected to be thrown.
- * @property expectedMessage The expected [Exception] message.
  */
 class OutputFileThrowsExceptionAssertion(
     private val outputFile: OutputFile,
-    private val expectedClass: Class<out Exception>,
-    private val expectedMessage: String? = null
+    private val expectedClass: Class<out Exception>
 ) : Assertion {
     /**
      * Check the assertion.
      */
     override fun check() {
-        val thrown = assertThatThrownBy {
+        assertThatThrownBy {
             outputFile.file()
-        }
-        thrown.isInstanceOf(
+        }.isInstanceOf(
             expectedClass
         )
-        expectedMessage.let {
-            thrown.hasMessageContaining(
-                expectedMessage
-            )
-        }
     }
 }
